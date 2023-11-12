@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Web API</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <h1>Cliente FEI de Web API</h1>    
+    <h3>Crear</h3>
+    <form action="" id="formNew" method="post">
+        <input type="text" id="add-nombre" placeholder="Nuevo alumno">
+        Aprobado: <input type="checkbox" name="" id="add-estaAprobado">
+        <input type="submit" value="Agregar">
+    </form>
+
+    <div id="editForm">
+        <h3>Editar</h3>
+        <form action="" id="formUpdate">
+            <input type="hidden" name="" id="edit-id">
+            <input type="checkbox" name="" id="edit-estaAprobado">
+            <input type="text" name="" id="edit-nombre">
+            <input type="submit" name="" value="Guardar">
+            <a href="" aria-label="Close" class="close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Aprobado</th>
+            <th>Nombre</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
